@@ -12,15 +12,18 @@ var NOOP      = function() {};
 var config    = yml.loadEnv();
 
 
-
-
 /**
  * $ sailor -v
  * $ sailor -V
  * $ sailor --version
  * $ sailor version
  */
-program.version(pkg.version, '-v, --version');
+program
+  .version(pkg.version, '-v, --version')
+  .unknownOption = NOOP;
+
+program.usage('[command]');
+
 
 // make `-v` option case-insensitive
 process.argv = _.map(process.argv, function(arg) {
@@ -47,7 +50,6 @@ cmd = program.command('lift');
 cmd.unknownOption = NOOP;
 cmd.description('');
 cmd.action(function(){
-  console.log();
   script.lift(process.cwd(), config);
 });
 
