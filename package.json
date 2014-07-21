@@ -1,5 +1,5 @@
 {
-  "name": "sailor",
+  "name": "sailorjs",
   "description": "Plugin System for Sails",
   "version": "0.1.0",
   "author": {
@@ -26,7 +26,7 @@
   "keywords": [],
   "license": "MIT",
   "main": "",
-  "repository": "sailorjs/sailor",
+  "repository": "sailorjs/sailorjs",
   "scripts": {
     "test": "mocha -b",
     "prepublish": "npm prune"
