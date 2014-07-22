@@ -4,18 +4,20 @@
 
 var _       = require('lodash');
 var program = require('commander');
+var pkg     = require('../package.json');
+var chalk   = require('chalk');
 
 
 var sailor_logo =
-  '              ' + '\t.---------------------------------------.  ' + '\n' +
-  '       |\\    ' + '\t|            Sailor v0.1.0              |  ' + '\n' +
-  '        \\\\  ' + '\t|                                       |  ' + '\n' +
-  '   .-"""-||   ' + '\t|       Plugin system for Sails         |  ' + '\n' +
-  '  / _\\__ ||  ' + '\t|      https://github.com/sailorjs      |  ' + '\n' +
-  '  |/____`||   ' + '\t\'---------------------------------------\'' + '\n' +
-  '  ((__,__)|   ' + '() ' + '\n' +
-  '   |  __.\'/  ' + 'º' + '\n' +
-  '   \'.(_).\'\'';
+  chalk.cyan('              ' + '\t.---------------------------------------.  '           +  '\n')+
+  chalk.cyan('       |\\    ' + '\t|             Sailor v'+pkg.version+'             |  ' + '\n' )+
+  chalk.cyan('        \\\\  ' + '\t|                                       |  '           + '\n' )+
+  chalk.cyan('   .-"""-||   ' + '\t|       '+pkg.description+'         |  '           + '\n' )+
+  chalk.cyan('  / _\\__ ||  ' + '\t|      https://github.com/sailorjs      |  '           + '\n' )+
+  chalk.cyan('  |/____`||   ' + '\t\'---------------------------------------\''           + '\n' )+
+  chalk.cyan('  ((__,__)|   ' + '() '                                                     + '\n' )+
+  chalk.cyan('   |  __.\'/  ' + 'º'                                                       + '\n' )+
+  chalk.cyan('   \'.(_).\'\''                                                                    );
 
 //
 //

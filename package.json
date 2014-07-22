@@ -8,6 +8,7 @@
     "url": "https://github.com/Kikobeats"
   },
   "dependencies": {
+    "chalk": "^0.5.1",
     "coffee-script": "^1.7.1",
     "commander": "^2.3.0",
     "fs-extra": "^0.10.0",
@@ -15,7 +16,8 @@
     "lodash": "^2.4.1",
     "sails": "^0.10.0-rc9",
     "socket.io-client": "~0.9.16",
-    "wrench": "^1.5.8"
+    "wrench": "^1.5.8",
+    "sailor-scripts" : "*"
   },
   "devDependencies": {
     "mocha": "^1.20.1",
@@ -28,7 +30,10 @@
   "main": "",
   "repository": "sailorjs/sailorjs",
   "scripts": {
-    "test": "mocha -b",
+    "test": "sh test/test.sh",
     "prepublish": "npm prune"
-  }
+  },
+  "bin": {
+      "sailor": "bin/sailor.js"
+    }
 }

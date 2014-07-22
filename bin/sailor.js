@@ -7,9 +7,9 @@ var script    = require("sailor-scripts");
 var _         = require('lodash');
 var program   = require('./_commander');
 var pkg       = require('../package.json');
-var yml       = require('./helpers/yamlHelper');
+var helper    = require('./helpers');
 var NOOP      = function() {};
-var config    = yml.loadEnv();
+var config    = helper.loadEnv();
 
 
 /**
