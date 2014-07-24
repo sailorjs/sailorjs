@@ -3,62 +3,54 @@
 /**
  * Dependencies
  */
-var script    = require("sailor-scripts");
-var _         = require('lodash');
-var program   = require('./_commander');
-var pkg       = require('../package.json');
-var helper    = require('./helpers');
-var NOOP      = function() {};
-var config    = helper.loadEnv();
+var script = require("sailor-scripts");
+var parser = require("nomnom")(require('../package.json'));
 
 
 /**
- * $ sailor -v
- * $ sailor -V
- * $ sailor --version
- * $ sailor version
+ * Initialize
  */
-program
-  .version(pkg.version, '-v, --version')
-  .unknownOption = NOOP;
-
-program.usage('[command]');
-
-
-// make `-v` option case-insensitive
-process.argv = _.map(process.argv, function(arg) {
-  return (arg === '-V') ? '-v' : arg;
-});
+parser.script("sailor");
 
 
 /**
- * $ sailor build
+ * version
  */
-var cmd;
-cmd = program.command('build');
-cmd.unknownOption = NOOP;
-cmd.description('');
-cmd.action(function(){
-  script.build();
-});
+parser.option('version', {
+   abbr: 'v',
+   flag: true,
+   help: "Output the version of the CLI"
+})
 
 /**
- * $ sailor lift
+ * lift command
  */
-var cmd;
-cmd = program.command('lift');
-cmd.unknownOption = NOOP;
-cmd.description('');
-cmd.action(function(){
-  script.lift(process.cwd(), config);
-});
+ parser.command('lift')
+    .callback(function() {
+       script.lift(process.cwd());
+    })
+    .help("Start with a Sailor Proyect");
+
+/**
+ * new command
+ */
+parser.command('new')
+   .callback(function() {
+      console.log('new!');
+   })
+   .help("Created a new Sailor Proyect")
+
+/**
+ * new module command
+ */
+parser.command('new module')
+   .callback(function() {
+      console.log('new module!');
+   })
+   .help("Created a new module for Sailor");
 
 
 /**
- * $ sailor
+ * Parse!
  */
-program.parse(process.argv);
-var NO_COMMAND_SPECIFIED = program.args.length === 0;
-if (NO_COMMAND_SPECIFIED) {
-  program.usageMinusWildcard();
-}
+parser.parse();

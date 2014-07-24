@@ -1,7 +1,7 @@
 {
   "name": "sailorjs",
   "description": "Plugin System for Sails",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": {
     "name": "Kiko Beats",
     "email": "josefrancisco.verdu@gmail.com",
@@ -10,18 +10,18 @@
   "dependencies": {
     "chalk": "^0.5.1",
     "coffee-script": "^1.7.1",
-    "commander": "^2.3.0",
+    "nommon": "https://github.com/sailorjs/nomnom",
     "fs-extra": "^0.10.0",
     "js-yaml": "^3.1.0",
     "lodash": "^2.4.1",
-    "sails": "^0.10.0-rc9",
+    "sails": "https://github.com/sailorjs/sailorjs#sailor",
     "socket.io-client": "~0.9.16",
     "wrench": "^1.5.8",
     "sailor-scripts" : "*"
   },
   "devDependencies": {
-    "mocha": "^1.20.1",
-    "should": "^4.0.4"
+    "mocha": "*",
+    "should": "*"
   },
   "engines": {},
   "homepage": "",

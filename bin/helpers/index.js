@@ -5,6 +5,8 @@ var fs     = require('fs');
 var path   = require('path');
 var util   = require('util');
 var yaml   = require('js-yaml');
+var _      = require('lodash');
+
 
 
 /**
@@ -26,8 +28,10 @@ var loadYML = function(route){
  */
 var loadEnvironment = function(){
   var config = loadYML('../../sailor.yml');
-  return loadYML('../../environment/' + config.environment + '.yml');
+  var file   = loadYML('../../environment/' + config.environment + '.yml');
+  return file;
 };
+
 
 
 /**
