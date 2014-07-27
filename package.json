@@ -1,7 +1,7 @@
 {
   "name": "sailorjs",
   "description": "Plugin System for Sails",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "author": {
     "name": "Kiko Beats",
     "email": "josefrancisco.verdu@gmail.com",
@@ -15,6 +15,7 @@
     "lodash": "^2.4.1",
     "nommon": "git://github.com/sailorjs/nomnom#master",
     "sailor-scripts": "*",
+    "sailor-errorify": "*",
     "sails": "git://github.com/sailorjs/sailorjs#sailor",
     "socket.io-client": "~0.9.16",
     "update-notifier": "^0.2.0",
