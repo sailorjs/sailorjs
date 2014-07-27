@@ -13,9 +13,9 @@
     "fs-extra": "^0.10.0",
     "js-yaml": "^3.1.0",
     "lodash": "^2.4.1",
-    "nommon": "https://github.com/sailorjs/nomnom",
+    "nommon": "git://github.com/sailorjs/nomnom#master",
     "sailor-scripts": "*",
-    "sails": "https://github.com/sailorjs/sailorjs#sailor",
+    "sails": "git://github.com/sailorjs/sailorjs#sailor",
     "socket.io-client": "~0.9.16",
     "update-notifier": "^0.2.0",
     "wrench": "^1.5.8"

@@ -7,27 +7,7 @@ var pkg            = require('../package.json');
 var script         = require('sailor-scripts');
 var parser         = require('nomnom')(pkg);
 var updateNotifier = require('update-notifier');
-var execSync       = require('exec-sync');
 var chalk          = require('chalk');
-var multiline      = require('multiline');
-
-
-var description_new = multiline(function(){/*
-Use Yeoman for this:
-
-1) Install yo: npm install -g yo
-2) Install the generator: npm install -g generator-sailor
-3) Run the generator: yo sailor
-*/});
-
-var description_module = multiline(function(){/*
-Use Yeoman for this:
-
-1) Install yo: npm install -g yo
-2) Install the generator: npm install -g generator-sailor-module
-3) Run the generator: yo sailor-module
-*/});
-
 
 /**
  * Initialize
@@ -73,8 +53,27 @@ parser.option('version', {
  * new command
  */
 parser.command('new')
-   .callback(function() {
-    console.log(chalk.gray(description_new));
+   .callback(function(name) {
+
+    if (name[1]==='module'){
+      if(name[2]===undefined){
+        console.log(chalk.red("error") + ": need a name for a new module.")
+      } else {
+        script.newModule(name[2], function(){
+          console.log("Module '" + chalk.cyan(name[2]) + "' created! ")
+        });
+      }
+      return;
+    }
+
+    if(name[1]===undefined){
+      console.log(chalk.red("error") + ": need a name for a new proyect.")
+    } else {
+      script.newBase(name[1], function(){
+        console.log("Proyect '" + chalk.cyan(name[1]) + "' created! ")
+      });
+    }
+
    })
    .help("Created a new Sailor Proyect")
 
@@ -82,9 +81,6 @@ parser.command('new')
  * new module command
  */
 parser.command('new module')
-   .callback(function() {
-      console.log(chalk.gray(description_module));
-   })
    .help("Created a new module for Sailor");
 
 

@@ -1,13 +1,6 @@
-/**
- * Dependencies
- */
-var translate = require("sailor-translate");
-var errorify  = require("sailor-errorify");
-
 module.exports = {
-  translate: translate,
-  error: errorify.error,
-  errorValidation : errorValidation
+  errorify: require("sailor-errorify"),
+  scripts: require("sailor-scripts")
 };
 
 
