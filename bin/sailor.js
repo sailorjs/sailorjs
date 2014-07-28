@@ -29,7 +29,7 @@ parser.option('version', {
    callback: function() {
     return pkg.name + "@" + pkg.version;
     }
-})
+});
 
 /**
  * help
@@ -38,7 +38,7 @@ parser.option('version', {
     abbr: 'h',
     flag: true,
     help: "Ouput this information"
- })
+ });
 
 /**
  * lift command
@@ -57,25 +57,25 @@ parser.command('new')
 
     if (name[1]==='module'){
       if(name[2]===undefined){
-        console.log(chalk.red("error") + ": need a name for a new module.")
+        parser.message("need a name for a new module.", 1);
       } else {
         script.newModule(name[2], function(){
-          console.log("Module '" + chalk.cyan(name[2]) + "' created! ")
+          parser.message("Module '" + chalk.cyan(name[2]) + "' created! ");
         });
       }
       return;
     }
 
     if(name[1]===undefined){
-      console.log(chalk.red("error") + ": need a name for a new proyect.")
+      parser.message("need a name for a new proyect.", 1);
     } else {
       script.newBase(name[1], function(){
-        console.log("Proyect '" + chalk.cyan(name[1]) + "' created! ")
+        parser.message("Proyect '" + chalk.cyan(name[1]) + "' created! ");
       });
     }
 
    })
-   .help("Created a new Sailor Proyect")
+   .help("Created a new Sailor Proyect");
 
 /**
  * new module command
