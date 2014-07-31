@@ -12,16 +12,17 @@
   },
   "dependencies": {
     "chalk": "^0.5.1",
-    "coffee-script": "^1.7.1",
+    "coffee-script": "*",
     "fs-extra": "^0.10.0",
     "js-yaml": "^3.1.0",
     "lodash": "^2.4.1",
-    "nomnom": "git://github.com/sailorjs/nomnom",
-    "sailor-errorify": "*",
-    "sailor-scripts": "*",
-    "sails": "git://github.com/sailorjs/sails",
+    "nomnom": "git://github.com/sailorjs/nomnom.git",
+    "sailor-errorify": "git://github.com/sailorjs/sailor-errorify",
+    "sailor-scripts": "git://github.com/sailorjs/sailor-scripts",
+    "sailor-translate": "git://github.com/sailorjs/sailor-translate",
     "socket.io-client": "~0.9.16",
     "update-notifier": "^0.2.0",
+    "validator": "^3.16.1",
     "wrench": "^1.5.8"
   },
   "devDependencies": {
