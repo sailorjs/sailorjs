@@ -1,12 +1,12 @@
 # Sailor
 
-> Plugin System for Sails [![Build Status](https://secure.travis-ci.org/Kikobeats/sailor.png?branch=master)](https://travis-ci.org/Kikobeats/sailor)
+> Plugin System for Sails
 
 ## Install
 
-## Usage
-
-## API
+```
+npm instal sailorjs -g
+```
 
 ## License
 
