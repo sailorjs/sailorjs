@@ -42,20 +42,26 @@ var chalk          = require('chalk');
  */
  parser.command('lift')
  .callback(function(action) {
+  var opts = {};
+
   if (action.silly){
-    var opts = {
-      log: {
-        level: 'silly'
-      }
+    opts.logs = {
+      level: 'silly'
     };
-    script.lift(process.cwd(), opts);
   }
-  script.lift(process.cwd());
+  if (action.production)
+    opts.environment = 'production';
+
+  script.lift(process.cwd(), opts);
 })
  .options({
   silly: {
     flag: true,
-    help: "Actiave silly level in logs"
+    help: "Activate silly level in logs"
+  },
+  production: {
+    flag: true,
+    help: "Activate production environment"
   }
 })
  .help("Start with a Sailor Proyect");
