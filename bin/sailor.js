@@ -6,17 +6,11 @@
 var pkg            = require('../package.json');
 var script         = require('sailor-scripts');
 var parser         = require('nomnom')(pkg);
-var updateNotifier = require('update-notifier');
 var chalk          = require('chalk');
 
 /**
  * Initialize
  */
- // Checks for available update and returns an instance
- updateNotifier({
-  packageName: pkg.name,
-  packageVersion: pkg.version
- }).notify();
  // initialize CLI
  parser.script("sailor");
 
