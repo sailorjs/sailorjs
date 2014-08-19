@@ -11,7 +11,7 @@
     "sailor": "bin/sailor.js"
   },
   "dependencies": {
-    "chalk": "^0.5.1",
+    "chalk": "^0.5.0",
     "coffee-script": "*",
     "fs-extra": "^0.10.0",
     "js-yaml": "^3.1.0",
