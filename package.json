@@ -18,6 +18,7 @@
     "lodash": "^2.4.1",
     "nomnom": "git://github.com/sailorjs/nomnom.git",
     "sailor-errorify": "git://github.com/sailorjs/sailor-errorify",
+    "sailor-translate": "git://github.com/sailorjs/sailor-translate",
     "socket.io-client": "~0.9.16",
     "validator": "^3.16.1",
     "wrench": "^1.5.8"
