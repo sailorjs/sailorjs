@@ -98,16 +98,6 @@ var jwt            = require('jwt-simple');
                  ", secret " + chalk.underline(options.secret) +
                  " and payload " + chalk.underline(payload) +
                  " is: \n" + token);
-
-  // var payload = { foo: 'bar' };
-  // var secret = 'xxx';
-
-  // // encode
-
-
-  // // decode
-  // var decoded = jwt.decode(token, secret);
-  // console.log(decoded); //=> { foo: 'bar' }
 });
 
 /**
