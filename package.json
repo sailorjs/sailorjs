@@ -22,7 +22,6 @@
     "sailor-translate": "git://github.com/sailorjs/sailor-translate",
     "sailor-validator": "git://github.com/sailorjs/sailor-validator",
     "socket.io-client": "~0.9.16",
-    "validator": "^3.16.1",
     "wrench": "^1.5.8"
   },
   "devDependencies": {
