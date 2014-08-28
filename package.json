@@ -36,7 +36,6 @@
   "main": "",
   "repository": "sailorjs/sailorjs",
   "scripts": {
-    "test": "sh test/test.sh",
-    "prepublish": "npm prune"
+    "test": "sh test/test.sh"
   }
 }
