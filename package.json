@@ -1,7 +1,7 @@
 {
   "name": "sailorjs",
   "description": "Plugin System for Sails",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "author": {
     "name": "Kiko Beats",
     "email": "josefrancisco.verdu@gmail.com",
@@ -15,7 +15,6 @@
     "coffee-script": "*",
     "fs-extra": "^0.10.0",
     "js-yaml": "^3.1.0",
-    "jwt-simple": "*",
     "lodash": "^2.4.1",
     "nomnom": "git://github.com/sailorjs/nomnom.git",
     "sailor-errorify": "git://github.com/sailorjs/sailor-errorify",
