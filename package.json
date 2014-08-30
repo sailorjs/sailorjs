@@ -1,7 +1,7 @@
 {
   "name": "sailorjs",
-  "description": "Plugin System for Sails",
-  "version": "0.3.3",
+  "description": "Components in the backend",
+  "version": "0.3.4",
   "author": {
     "name": "Kiko Beats",
     "email": "josefrancisco.verdu@gmail.com",
