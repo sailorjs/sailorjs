@@ -13,7 +13,7 @@
 **Sailor** is a [Sails core](https://github.com/balderdashy/sails) modification that support extra features for create a custom backend based in modularize your code:
 
 - Packet the common logic of your applications in modules (like μservices) and load as npm package.
-- Improve Multilanguage experience, clean error message and it definitely ready for use in your frontend.
+- Improve Multilanguage experience, clean error message and in definitely ready for use in your frontend.
 - JSONWebtoken for authentication instead of Cookies (for HTTP and WebSockets).
 
 Use specially **Sailor** if you want to:
