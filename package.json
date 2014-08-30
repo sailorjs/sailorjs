@@ -11,18 +11,18 @@
     "sailor": "bin/sailor.js"
   },
   "dependencies": {
-    "chalk": "^0.5.0",
+    "chalk": "*",
     "coffee-script": "*",
-    "fs-extra": "^0.10.0",
-    "js-yaml": "^3.1.0",
-    "lodash": "^2.4.1",
+    "fs-extra": "*",
+    "js-yaml": "*",
+    "lodash": "*",
     "nomnom": "git://github.com/sailorjs/nomnom.git",
     "sailor-errorify": "git://github.com/sailorjs/sailor-errorify",
     "sailor-scripts": "git://github.com/sailorjs/sailor-scripts",
     "sailor-translate": "git://github.com/sailorjs/sailor-translate",
     "sailor-validator": "git://github.com/sailorjs/sailor-validator",
     "socket.io-client": "~0.9.16",
-    "wrench": "^1.5.8"
+    "wrench": "*"
   },
   "devDependencies": {
     "mocha": "*",
