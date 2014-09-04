@@ -14,7 +14,6 @@
 
 - Packet the common logic of your applications in modules (like μservices) and load as npm package.
 - Improve Multilanguage experience, clean error message and in definitely ready for use in your frontend.
-- JSONWebtoken for authentication instead of Cookies (for HTTP and WebSockets).
 - Support server reload, clustering and deploy by [PM2](https://github.com/Unitech/PM2).
 
 Use specially **Sailor** if you want to:
@@ -47,6 +46,7 @@ This package content the CLI and is a facade for load others packets necessary f
 ### Modules available
 
 - [sailor-module-user](https://github.com/sailorjs/sailor-module-user)
+- [sailor-module-lastfm](https://github.com/sailorjs/sailor-module-lastfm)
 
 ## License
 
