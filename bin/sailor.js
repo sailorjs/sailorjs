@@ -3,11 +3,11 @@
 /**
  * Dependencies
  */
-var pkg            = require('../package.json');
-var script         = require('sailor-scripts');
-var parser         = require('nomnom')(pkg);
-var chalk          = require('chalk');
-var jwt            = require('jwt-simple');
+var pkg    = require('../package.json');
+var script = require('sailor-scripts');
+var parser = require('nomnom')(pkg);
+var chalk  = require('chalk');
+
 
 /**
  * Initialize
@@ -68,60 +68,39 @@ var jwt            = require('jwt-simple');
 });
 
 
-
-/**
- * Create a new token
- */
- parser.command('token')
- .options({
-  algorithm: {
-    abbr: 'a',
-    default: 'HS256',
-    help: 'Supported algorithms: HS256, HS384, HS512 and RS256.'
-  },
-  secret: {
-    abbr: 's',
-    help: 'Salt for generate the token'
-  }
-})
- .help("Generate a token for Sailor Proyect")
- .callback(function(options){
-
-  if (options[1] === undefined ) parser.message("need a payload to generate a token.", 1);
-  if (options.secret === undefined) parser.message("need a secret to generate a token.", 1);
-
-  var payload = options[1];
-  var token = jwt.encode(payload, options.secret);
-
-  parser.message("Token generated with " +
-                 "algorithm " + chalk.underline(options.algorithm) +
-                 ", secret " + chalk.underline(options.secret) +
-                 " and payload " + chalk.underline(payload) +
-                 " is: \n" + token);
-});
-
 /**
  * new command
  */
  parser.command('new')
- .callback(function(name) {
+ .options({
+   organization: {
+     abbr: 'org',
+     default: 'sailorjs',
+     help: "Link your Github Organization with the project"
+   },
+   repository: {
+     abbr: 'rep',
+     help: "Link your Github Repository with the project"
+   },
+ })
+ .callback(function(input) {
 
-  if (name[1]==='module'){
-    if(name[2]===undefined){
+  if (input[1]==='module'){
+    if(input[2]===undefined){
       parser.message("need a name for a new module.", 1);
     } else {
-      script.newModule(name[2], function(){
-        parser.message("Module '" + chalk.cyan(name[2]) + "' created! ", 0);
+      script.newModule(input[2], function(){
+        parser.message("Module '" + chalk.cyan(input[2]) + "' created! ", 0);
       });
     }
     return;
   }
 
-  if(name[1]===undefined){
+  if(input[1]===undefined){
     parser.message("need a name for a new proyect.", 1);
   } else {
-    script.newBase(name[1], function(){
-      parser.message("Proyect '" + chalk.cyan(name[1]) + "' created! ", 0);
+    script.newBase(input[1], input.organization, input.repository, function(){
+      parser.message("Proyect '" + chalk.cyan(input[1]) + "' created! ", 0);
     });
   }
 
