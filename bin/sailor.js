@@ -89,7 +89,14 @@ var chalk  = require('chalk');
     if(input[2]===undefined){
       parser.message("need a name for a new module.", 1);
     } else {
-      script.newModule(input[2], function(){
+
+      options = {
+        name        : input[2],
+        organization: input.organization,
+        repository  : input.repository || input[2]
+      };
+
+      script.newModule(options, function(){
         parser.message("Module '" + chalk.cyan(input[2]) + "' created! ", 0);
       });
     }
@@ -99,7 +106,14 @@ var chalk  = require('chalk');
   if(input[1]===undefined){
     parser.message("need a name for a new proyect.", 1);
   } else {
-    script.newBase(input[1], input.organization, input.repository, function(){
+
+    options = {
+      name        : input[1],
+      organization: input.organization,
+      repository  : input.repository || input[1]
+    };
+
+    script.newBase(options, function(){
       parser.message("Proyect '" + chalk.cyan(input[1]) + "' created! ", 0);
     });
   }
