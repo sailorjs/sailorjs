@@ -76,12 +76,16 @@ var chalk  = require('chalk');
    organization: {
      abbr: 'org',
      default: 'sailorjs',
-     help: "Link your Github Organization with the project"
+     help: "Link your Github organization with the project"
    },
    repository: {
      abbr: 'rep',
-     help: "Link your Github Repository with the project"
+     help: "Link your Github repository with the project"
    },
+   description: {
+     abbr: 'desc',
+     help: "Added description for your project"
+   }
  })
  .callback(function(input) {
 
@@ -93,7 +97,8 @@ var chalk  = require('chalk');
       options = {
         name        : input[2],
         organization: input.organization,
-        repository  : input.repository || input[2]
+        repository  : input.repository || input[2],
+        description : input.description || "A new module for Sailor"
       };
 
       script.newModule(options, function(){
@@ -110,7 +115,8 @@ var chalk  = require('chalk');
     options = {
       name        : input[1],
       organization: input.organization,
-      repository  : input.repository || input[1]
+      repository  : input.repository || input[1],
+      description : input.description || "A new Sailor Proyect"
     };
 
     script.newBase(options, function(){
