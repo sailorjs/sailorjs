@@ -1,3 +1,5 @@
+<center>![](http://i.imgur.com/dslYdiw.png)</center>
+
 # Sailor
 
 [![Build Status](http://img.shields.io/travis/sailorjs/sails/master.svg?style=flat)](https://travis-ci.org/sailorjs/sails)
@@ -27,6 +29,12 @@ Use specially **Sailor** if you want to:
 
 ```
 npm instal sailorjs -g
+```
+
+and later:
+
+```
+$ sailor
 ```
 
 
