@@ -28,11 +28,14 @@
     "mocha": "*",
     "should": "*"
   },
-  "engines": {},
-  "homepage": "",
-  "keywords": ["framework", "fast development", "microservices"],
+  "homepage": "http://sailorjs.org",
+  "keywords": [
+    "framework",
+    "fast development",
+    "microservices"
+  ],
   "license": "MIT",
-  "main": "",
+  "main": "index.js",
   "repository": "sailorjs/sailorjs",
   "scripts": {
     "test": "sh test/test.sh"
