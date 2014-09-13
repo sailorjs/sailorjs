@@ -32,7 +32,6 @@
     "component"
   ],
   "license": "MIT",
-  "main": "index.js",
   "repository": "sailorjs/sailorjs",
   "scripts": {
     "test": "sh test/test.sh"
