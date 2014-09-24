@@ -12,7 +12,6 @@
   },
   "dependencies": {
     "chalk": "*",
-    "coffee-script": "*",
     "nomnom": "git://github.com/sailorjs/nomnom.git",
     "sailor-errorify": "git://github.com/sailorjs/sailor-errorify",
     "sailor-scripts": "git://github.com/sailorjs/sailor-scripts",
@@ -20,6 +19,7 @@
     "sailor-validator": "git://github.com/sailorjs/sailor-validator"
   },
   "devDependencies": {
+    "coffee-script": "*",
     "mocha": "*",
     "should": "*"
   },
