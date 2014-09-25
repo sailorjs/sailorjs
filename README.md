@@ -42,7 +42,7 @@ $ sailor
 
 This package content the CLI and is a facade for load others packets necessary for builds module and reduce the dependency. Also the components are divided in `modules` namespaces.
 
-### Core
+### Core 
 
 - [sailor-translate](https://github.com/sailorjs/sailor-translate)
 - [sailor-validator](https://github.com/sailorjs/sailor-validator)
@@ -51,7 +51,19 @@ This package content the CLI and is a facade for load others packets necessary f
 
 ### Modules
 
+#### Utilities
+
+- [sailor-module-i18n](https://github.com/sailorjs/sailor-module-i18n) (*default*)
+- [sailor-module-response](https://github.com/sailorjs/sailor-module-response) (*default*)
+- [sailor-module-validator](https://github.com/sailorjs/sailor-module-validator) (*default*)
+- [sailor-module-jsonwebtoken](https://github.com/sailorjs/sailor-module-jsonwebtoken)
+
+#### Logic
+
 - [sailor-module-user](https://github.com/sailorjs/sailor-module-user)
+
+#### Third-Party API's
+
 - [sailor-module-lastfm](https://github.com/sailorjs/sailor-module-lastfm)
 - [sailor-module-mandrill](https://github.com/sailorjs/sailor-module-mandrill)
 - [sailor-module-mailchimp](https://github.com/sailorjs/sailor-module-mailchimp)
