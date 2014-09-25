@@ -57,6 +57,7 @@ This package content the CLI and is a facade for load others packets necessary f
 - [sailor-module-response](https://github.com/sailorjs/sailor-module-response) (*default*)
 - [sailor-module-validator](https://github.com/sailorjs/sailor-module-validator) (*default*)
 - [sailor-module-jsonwebtoken](https://github.com/sailorjs/sailor-module-jsonwebtoken)
+- [sailor-module-crontab](https://github.com/sailorjs/sailor-module-crontab)
 
 #### Logic
 
