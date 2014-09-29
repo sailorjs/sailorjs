@@ -3,16 +3,16 @@
 /**
  * Dependencies
  */
-var pkg    = require('../package.json');
-var script = require('sailor-scripts');
-var parser = require('nomnom')(pkg);
-var chalk  = require('chalk');
-
+var updateNotifier = require('./util/notifier');
+var pkg            = require('../package.json');
+var script         = require('sailor-scripts');
+var parser         = require('nomnom')(pkg);
+var chalk          = require('chalk');
 
 /**
  * Initialize
  */
- // initialize CLI
+ updateNotifier();
  parser.script("sailor");
 
 /**
@@ -91,7 +91,7 @@ var chalk  = require('chalk');
 
   if (input[1]==='module'){
     if(input[2]===undefined){
-      parser.message("need a name for a new module.", 1);
+      parser.message.error("need a name for a new module.", 1, " ");
     } else {
 
       options = {
@@ -102,14 +102,14 @@ var chalk  = require('chalk');
       };
 
       script.newModule(options, function(){
-        parser.message("Module '" + chalk.cyan(input[2]) + "' created! ", 0);
+        parser.message.success("Module '" + chalk.cyan(input[2]) + "' created! ", " ");
       });
     }
     return;
   }
 
   if(input[1]===undefined){
-    parser.message("need a name for a new proyect.", 1);
+    parser.message.error("need a name for a new proyect.", 1, " ");
   } else {
 
     options = {
@@ -120,7 +120,7 @@ var chalk  = require('chalk');
     };
 
     script.newBase(options, function(){
-      parser.message("Proyect '" + chalk.cyan(input[1]) + "' created! ", 0);
+      parser.message.success("Proyect '" + chalk.cyan(input[1]) + "' created! ", " ");
     });
   }
 
