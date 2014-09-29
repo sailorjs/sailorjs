@@ -91,7 +91,7 @@ var chalk          = require('chalk');
 
   if (input[1]==='module'){
     if(input[2]===undefined){
-      parser.message.error("need a name for a new module.", 1, " ");
+      parser.message.error("Need a name for a new module.", 1);
     } else {
 
       options = {
@@ -102,14 +102,14 @@ var chalk          = require('chalk');
       };
 
       script.newModule(options, function(){
-        parser.message.success("Module '" + chalk.cyan(input[2]) + "' created! ", " ");
+        parser.message.info("Module '" + chalk.cyan(input[2]) + "' created! ", "");
       });
     }
     return;
   }
 
   if(input[1]===undefined){
-    parser.message.error("need a name for a new proyect.", 1, " ");
+    parser.message.error("Need a name for a new proyect.", 1);
   } else {
 
     options = {
@@ -120,7 +120,7 @@ var chalk          = require('chalk');
     };
 
     script.newBase(options, function(){
-      parser.message.success("Proyect '" + chalk.cyan(input[1]) + "' created! ", " ");
+      parser.message.info("Proyect '" + chalk.cyan(input[1]) + "' created! ", "");
     });
   }
 

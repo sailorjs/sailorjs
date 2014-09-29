@@ -12,6 +12,6 @@ module.exports = function() {
 
   if (notifier.update) {
     notifier.notify(true);
-    parser.message.info("Please, update to continue.", " ");
+    parser.message.debug("Please, update to continue.", " ");
   }
 };
