@@ -12,12 +12,13 @@
   },
   "dependencies": {
     "chalk": "*",
-    "update-notifier": "*",
     "nomnom": "git://github.com/sailorjs/nomnom.git",
     "sailor-errorify": "git://github.com/sailorjs/sailor-errorify",
     "sailor-scripts": "git://github.com/sailorjs/sailor-scripts",
     "sailor-translate": "git://github.com/sailorjs/sailor-translate",
-    "sailor-validator": "git://github.com/sailorjs/sailor-validator"
+    "sailor-validator": "git://github.com/sailorjs/sailor-validator",
+    "sort-keys": "*",
+    "update-notifier": "*"
   },
   "devDependencies": {
     "coffee-script": "*",
