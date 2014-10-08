@@ -3,6 +3,7 @@
 * Added `sort-keys` as dependency in `util`.
 * Improve testing scaffold from `sailor-scripts` with more functions for make easy the setup.
 * Added functions for handlers errors related with modules. Check in [lib/hooks/modules](https://github.com/sailorjs/sails/commit/7f6d863f39c65694960caa689d4c1aa7fc90b92b).
+* Added the most common status code shorcuts in [sailor-module-response](https://github.com/sailorjs/sailor-module-response/commit/6bbc1e94299f0de0a3b1c78b723cc33af079c02f) and updated [sailor-module-blueprints](https://github.com/sailorjs/sailor-module-blueprints/commit/a5f1d673b3ded9ec82320a7072ea7f1bf9941779).
 
 ## 0.4.3
 
