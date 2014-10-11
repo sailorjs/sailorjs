@@ -1,3 +1,8 @@
+## 0.4.5
+
+* Added support for [conditional database schema](https://github.com/balderdashy/sails/pull/2083#issuecomment-58672471).
+* Added new command `install` for install modules in base projects.
+
 ## 0.4.4
 
 * Added `sort-keys` as dependency in `util`.
