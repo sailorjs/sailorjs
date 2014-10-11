@@ -46,8 +46,13 @@ var chalk          = require('chalk');
  .options({
    save: {
      flag: true,
-     help: "Save the module in your package.json"
+     help: "Save the module in your package.json as production dependency"
    },
+   save_dev: {
+     flag: true,
+     abbr: 'save-dev',
+     help: "Save the module in your package.json as development dependency"
+   }
  })
  .help("Install a dependency in the base of your project")
  .callback(function(input) {
@@ -59,6 +64,7 @@ var chalk          = require('chalk');
 
   var command = 'npm install ' + input[1];
   if (input.save) command += ' --save';
+  if (input.save_dev) command += ' --save-dev';
 
   scripts.run(command);
   scripts.writeModuleFile(input[1], process.cwd());
