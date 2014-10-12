@@ -12,7 +12,7 @@
 
 <br>
 
-#### [Documentation](http://docs.sailorjs.org) **|** [Changelog](https://github.com/sailorjs/sailorjs/blob/master/CHANGELOG.md) **|** [Modules directory](https://github.com/sailorjs/sailor-docs/blob/master/es/3_anexos/directorio_de_modulos.md) **|** [Resources](https://github.com/sailorjs/sailor-docs/blob/master/es/3_anexos/recursos.md)
+#### [Documentation](https://github.com/sailorjs/sailor-docs) **|** [Changelog](https://github.com/sailorjs/sailorjs/blob/master/CHANGELOG.md) **|** [Modules directory](https://github.com/sailorjs/sailor-docs/blob/master/es/4_anexos/directorio_de_modulos.md) **|** [Resources](https://github.com/sailorjs/sailor-docs/blob/master/es/4_anexos/recursos.md)
 
 <br>
 
