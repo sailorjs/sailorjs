@@ -48,9 +48,8 @@ var chalk          = require('chalk');
      flag: true,
      help: "Save the module in your package.json as production dependency"
    },
-   save_dev: {
+   'save-dev': {
      flag: true,
-     abbr: 'save-dev',
      help: "Save the module in your package.json as development dependency"
    }
  })
@@ -63,8 +62,8 @@ var chalk          = require('chalk');
     parser.message.error("Module '" + input[1] + "' is already installed.", 1);
 
   var command = 'npm install ' + input[1];
-  if (input.save) command += ' --save';
-  if (input.save_dev) command += ' --save-dev';
+  if (input['save']) command += ' --save';
+  if (input['save-dev']) command += ' --save-dev';
 
   scripts.run(command);
   scripts.writeModuleFile(input[1], process.cwd());
