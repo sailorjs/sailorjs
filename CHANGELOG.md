@@ -4,6 +4,7 @@
 * Added new command `install` for install modules in base projects.
 * Added helpers in `validator`, `errorify` and `sailor-scripts`.
 * Fixed bug in [sails](https://github.com/sailorjs/sails/commit/55c8ef4906d5a7b785b1a2d06afbfa4618e54cc4) for load `findOne` blueprint from `sailor-module-blueprints`.
+* Improve CLI options commands.
 
 ## 0.4.4
 
