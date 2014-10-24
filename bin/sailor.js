@@ -105,17 +105,20 @@ var chalk          = require('chalk');
  */
  parser.command('new')
  .options({
+  name: {
+    abbr: 'n',
+    help: "Set the name of your new Sailor proyet"
+  },
    organization: {
-     abbr: 'org',
-     default: 'sailorjs',
+     abbr: 'o',
      help: "Link your Github organization with the project"
    },
    repository: {
-     abbr: 'rep',
+     abbr: 'r',
      help: "Link your Github repository with the project"
    },
    description: {
-     abbr: 'desc',
+     abbr: 'd',
      help: "Added description for your project"
    }
  })
@@ -127,10 +130,11 @@ var chalk          = require('chalk');
     } else {
 
       options = {
-        name        : input[2],
+        folder      : input[2],
+        name        : input.name || input[2],
         organization: input.organization,
-        repository  : input.repository || input[2],
-        description : input.description || "A new module for Sailor"
+        repository  : input.repository || input.name || input[2],
+        description : input.description
       };
 
       scripts.newModule(options, function(){
@@ -145,10 +149,11 @@ var chalk          = require('chalk');
   } else {
 
     options = {
-      name        : input[1],
+      folder      : input[1],
+      name        : input.name || input[1],
       organization: input.organization,
-      repository  : input.repository || input[1],
-      description : input.description || "A new Sailor Proyect"
+      repository  : input.repository || input.name || input[1],
+      description : input.description
     };
 
     scripts.newBase(options, function(){
