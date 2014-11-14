@@ -5,6 +5,7 @@
 * Added helpers in `validator`, `errorify` and `sailor-scripts`.
 * Fixed bug in [sails](https://github.com/sailorjs/sails/commit/55c8ef4906d5a7b785b1a2d06afbfa4618e54cc4) for load `findOne` blueprint from `sailor-module-blueprints`.
 * Improve CLI options commands.
+* Automatically use `www` folder if is available instead of `.tmp/public`.
 
 ## 0.4.4
 
