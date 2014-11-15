@@ -10,23 +10,26 @@
 
 > Components in the backend
 
-<br>
-
 #### [Documentation](https://github.com/sailorjs/sailor-docs) **|** [Changelog](https://github.com/sailorjs/sailorjs/blob/master/CHANGELOG.md) **|** [Modules directory](https://github.com/sailorjs/sailor-docs/blob/master/en/4_annexes/modules_directory.md) **|** [Resources](https://github.com/sailorjs/sailor-docs/blob/master/en/4_annexes/resources.md)
 
-<br>
+**Sailor** is a [Sails core](https://github.com/balderdashy/sails) fork that support extra features for create a custom backend based in modularize your code:
 
-**Sailor** is a [Sails core](https://github.com/balderdashy/sails) modification that support extra features for create a custom backend based in modularize your code:
+![](http://i.imgur.com/6AeMpYc.png)
 
-- Packet the common logic of your applications in modules (like μservices) and load as npm package.
-- Improve multilanguage experience, clean error message and in definitely ready for use in your frontend ([all here](https://github.com/sailorjs/sailor-docs/blob/master/es/3_anexos/componentes_del_nucleo.md)).
-- Support server reload, clustering and deploy by [PM2](https://github.com/Unitech/PM2).
+The most important features are:
+
++ Packet the common logic of your applications in modules (like μservices) and load as npm package.
++ Better multilanguage experience, clean error messages and definitely ready for use the responses in your frontend.
++ Improve the way to serve assets, in special ready for production mode. Clustering and deployment by [PM2](https://github.com/Unitech/PM2).
++ Handlebars as default template engine, with completely support for different layouts, partials and helpers.
 
 Use specially **Sailor** if you want to:
 
-- Focus your backend in API creation.
-- Have your frontend logic separate of your backend
-- Fast development for Applications and reusable code.
++ Focused on API backend and connect later with your frontend (Angular, Backbone, Ember, Atoms,..)
++ Have a frontend App client and use the server for API or some static pages (as landing page).
++ Reuse components and/or third API's and improve the timing of your projects.
+
+For connect your backend and your frontend we recommended use [Parrot](https://github.com/sailorjs/parrotjs).
 
 
 ## Install
