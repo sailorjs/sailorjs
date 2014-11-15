@@ -1,3 +1,7 @@
+## 0.4.6
+
+* Use `handlebars` as default template engine, with full support for helpers and different layouts or partials.
+
 ## 0.4.5
 
 * Added support for [conditional database schema](https://github.com/balderdashy/sails/pull/2083#issuecomment-58672471).
