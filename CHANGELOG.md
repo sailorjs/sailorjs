@@ -1,6 +1,7 @@
 ## 0.4.6
 
 * Use `handlebars` as default template engine, with full support for helpers and different layouts or partials.
+* In Sails is mandatory install and run `grunt` locally before lift the server. Grunt hook is optionally here.
 
 ## 0.4.5
 
