@@ -1,7 +1,7 @@
 <center>![](http://i.imgur.com/dslYdiw.png)</center>
 
 # Sailor
-
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/sailorjs/sailorjs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Build Status](http://img.shields.io/travis/sailorjs/sails/master.svg?style=flat)](https://travis-ci.org/sailorjs/sails)
 [![Dependency status](http://img.shields.io/david/sailorjs/sailorjs.svg?style=flat)](https://david-dm.org/sailorjs/sailorjs)
 [![Dev Dependencies Status](http://img.shields.io/david/dev/sailorjs/sailorjs.svg?style=flat)](https://david-dm.org/sailorjs/sailorjs#info=devDependencies)
