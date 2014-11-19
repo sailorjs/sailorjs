@@ -2,7 +2,7 @@
  * Exports
  */
 module.exports = {
-  errorify  : require('sailor-errorify'),
+  errorify  : require('sailor-validator/node_modules/sailor-errorify'),
   scripts   : require('sailor-scripts'),
   validator : require('sailor-validator'),
   translate : require('sailor-translate'),
