@@ -2,6 +2,7 @@
 
 * Use `handlebars` as default template engine, with full support for helpers and different layouts or partials.
 * In Sails is mandatory install and run `grunt` locally before lift the server. Grunt hook is optionally here.
+* Now `sailor-validator` use `sailor-errorify`. Reduce number of dependency and the size of the build.
 
 ## 0.4.5
 
